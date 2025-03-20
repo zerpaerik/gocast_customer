@@ -22,42 +22,18 @@ export const routes: Routes = [
       {
         path: 'request',
         loadComponent: () => import('./features/services/service-form/service-form.component').then(m => m.ServiceFormComponent),
-        canActivate: [AuthGuard]
       },
       {
-        path: 'roadside',
-        loadComponent: () => import('./features/services/sub-services/sub-services.component').then(m => m.SubServicesComponent),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'roadside/tow',
-        loadComponent: () => import('./features/services/service-request-form/service-request-form.component').then(m => m.ServiceRequestFormComponent),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'roadside/tire',
-        loadComponent: () => import('./features/services/service-request-form/service-request-form.component').then(m => m.ServiceRequestFormComponent),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'roadside/battery',
-        loadComponent: () => import('./features/services/service-request-form/service-request-form.component').then(m => m.ServiceRequestFormComponent),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'roadside/fuel',
-        loadComponent: () => import('./features/services/service-request-form/service-request-form.component').then(m => m.ServiceRequestFormComponent),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'roadside/locksmith',
-        loadComponent: () => import('./features/services/service-request-form/service-request-form.component').then(m => m.ServiceRequestFormComponent),
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'request-detail',
+        path: 'request/:id',
         loadComponent: () => import('./features/services/service-request-detail/service-request-detail.component').then(m => m.ServiceRequestDetailComponent),
-        canActivate: [AuthGuard]
+      },
+      {
+        path: 'in-progress',
+        loadComponent: () => import('./features/services/service-in-progress/service-in-progress.component').then(m => m.ServiceInProgressComponent),
+      },
+      {
+        path: 'rating',
+        loadComponent: () => import('./features/services/service-rating/service-rating.component').then(m => m.ServiceRatingComponent),
       }
     ],
     canActivate: [AuthGuard]

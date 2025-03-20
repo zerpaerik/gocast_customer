@@ -32,7 +32,7 @@ import { CommonModule } from '@angular/common';
             Enséñame
           </button>
           <button class="btn-accent" (click)="onRequestService()">
-            Necesito un servicio ahora
+            Comenzar a usar GoCast
           </button>
         </div>
       </div>
